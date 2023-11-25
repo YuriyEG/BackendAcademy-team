@@ -26,6 +26,9 @@ export const App = () => {
       <div className={styles.app__header}>
         <Header />
       </div>
+      <div style={{ color: 'white', height: '50px', padding: '40px' }} className={styles.app__header}>
+        Открой дверь в мир Бэкенда с нашей образовательной платформой!
+      </div>
       <div className={styles.app__main}>
         <div className={styles.app__aside}></div>
         <div className={styles.app__content}>
@@ -36,7 +39,9 @@ export const App = () => {
           </div>
         </div>
       </div>
-      <div className={styles.app__footer}></div>
+      <div className={styles.app__footer}>
+        <Header />
+      </div>
     </div>
   );
 };

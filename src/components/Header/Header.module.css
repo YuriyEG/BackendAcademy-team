@@ -7,14 +7,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 80px;
     color: rgba(255, 255, 255, 0.904);
-    padding-left: 12px;
+    padding-left: 40px;
     padding-right: 12px;
     font-size: 28px;
     font-family: "Regular", Arial, Helvetica, sans-serif;
     font-weight: 900;
-    border: 2px solid red;
+    border-bottom: 2px solid white;
 
+
+}
+
+.header__title {
+    font-size: 30px;
+    padding: 8px;
 }
 
 .header__burger {

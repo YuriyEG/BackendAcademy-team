@@ -39,6 +39,7 @@
         min-height: 100%;
         box-sizing: border-box;
         margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.214);
     }
 
     .app__footer {
@@ -91,6 +92,7 @@
         height: auto;
         box-sizing: border-box;
         margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.142);
     }
 
     .app__footer {
