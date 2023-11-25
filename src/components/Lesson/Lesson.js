@@ -4,11 +4,20 @@ import styles from './Lesson.module.css';
 
 const Lesson = ({ lesson }) => {
   const [hover, setHover] = useState(false);
-  const hoverStyle = hover ? { backgroundColor: 'rgb(152, 152, 152)', color: 'black' } : null;
+  const hoverStyle = hover ? { backgroundColor: 'rgb(50,50,50)', color: 'white' } : null;
+
+  const onHoverHandler = () => {
+    setHover(true);
+    setTimeout(() => {
+      if (hover) {
+        setHover(false);
+      }
+    }, 300);
+  };
   return (
     <div
       style={hoverStyle}
-      onMouseEnter={() => setHover(true)}
+      onMouseEnter={onHoverHandler}
       onMouseLeave={() => setHover(false)}
       className={styles.lesson}
     >
