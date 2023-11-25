@@ -4,7 +4,7 @@ import styles from './Lesson.module.css';
 
 const Lesson = ({ lesson }) => {
   const [hover, setHover] = useState(false);
-  const hoverStyle = hover ? { backgroundColor: 'rgb(50,50,50)', color: 'white' } : null;
+  const hoverStyle = hover ? { backgroundColor: 'gray', color: 'black' } : null;
 
   const onHoverHandler = () => {
     setHover(true);
