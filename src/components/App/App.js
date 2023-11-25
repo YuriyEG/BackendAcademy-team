@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import Lesson from '../Lesson/Lesson';
 import LessonCard from '../LessonCard/LessonCard';
 import data from '../../mockData/data';
@@ -75,7 +76,7 @@ export const App = () => {
             </div>
           </div>
           <div className={styles.app__footer}>
-            <Route path={routerPaths.base} render={() => <Header />} exact />
+            <Route path={routerPaths.base} render={() => <Footer />} exact />
           </div>
         </div>
         <Route render={() => <h1 style={{ color: 'white' }}>Вы перешли на несуществующую страницу</h1>} />

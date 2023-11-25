@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Regular;
+    src: url('../../assets/TTLakes-Regular.ttf');
+}
+
+.footer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px;
+    color: rgba(255, 255, 255, 0.904);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+    font-family: "Regular", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    border-bottom: 2px solid white;
+    border: 1px solid white;
+}
