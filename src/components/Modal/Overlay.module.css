@@ -1,0 +1,12 @@
+
+
+.overlay {
+    color: white;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    z-index: 10;
+    box-sizing: border-box;
+}
+

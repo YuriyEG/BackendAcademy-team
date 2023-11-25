@@ -1,0 +1,12 @@
+.modal-overlay {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 20;
+  animation: modal 0, 3s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

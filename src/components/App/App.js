@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import Modal from '../Modal/Modal';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Lesson from '../Lesson/Lesson';
 import LessonCard from '../LessonCard/LessonCard';
+import Starting from '../Starting/Starting';
 import data from '../../mockData/data';
+import Overlay from '../Modal/Overlay';
 
 import styles from './App.module.css';
 
@@ -21,8 +24,22 @@ const routerPaths = {
 };
 
 export const App = () => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <Router>
+      <Modal>
+        {loading ? (
+          <Overlay>
+            <Starting />
+          </Overlay>
+        ) : null}
+      </Modal>{' '}
       <Switch>
         <div className={styles.app}>
           <div className={styles.app__header}>
@@ -38,6 +55,7 @@ export const App = () => {
             exact
             render={() => <h1 style={{ color: 'white' }}>Страница регистрации</h1>}
           />
+
           <Route
             exact
             path={routerPaths.base}
