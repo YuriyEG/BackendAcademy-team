@@ -1,6 +1,5 @@
 
-
-https://aviasales-232brbw9c-yuriyeg.vercel.app
+https://backend-academi-team-bncs4zej5-yuriyeg.vercel.app
 
 
 # Getting Started with Create React App
