@@ -6,9 +6,7 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.header__title}>BackendAcademy</div>
-      <div className={styles.header__burger}>
-        <div className={styles.header__burger}>☰</div>
-      </div>
+      <div className={styles.header__burger}>☰</div>
     </div>
   );
 };

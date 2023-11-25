@@ -5,7 +5,6 @@ import styles from './Lesson.module.css';
 const Lesson = ({ lesson }) => {
   const [hover, setHover] = useState(false);
   const hoverStyle = hover ? { backgroundColor: 'rgb(152, 152, 152)', color: 'black' } : null;
-  console.log(lesson);
   return (
     <div
       style={hoverStyle}

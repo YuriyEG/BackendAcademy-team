@@ -1,0 +1,47 @@
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../assets/Inter-Regular.ttf');
+}
+
+@media  screen and (min-width: 320px) and (max-width: 768px) {
+    .lessonCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 92%;
+        height: auto;
+        min-height: 200px;
+        border: 1px solid white;
+        margin: 0 auto;
+        margin-bottom: 14px;
+        color: rgba(255, 255, 255);
+        background-color: rgb(9, 9, 9);
+        font-size: 20px;
+        font-family: "Regular", Arial, Helvetica, sans-serif;
+        padding: 20px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .lessonCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        border: 1px solid white;
+        margin: 0 auto;
+        margin-bottom: 14px;
+        color: white;
+        background-color: rgb(7, 7, 7);
+        font-size: 20px;
+        font-family: "Regular", Arial, Helvetica, sans-serif;
+        padding: 20px;
+    }
+
+}
+
+

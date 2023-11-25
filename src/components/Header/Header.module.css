@@ -7,23 +7,24 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 80px;
+    height: 96px;
     color: rgba(255, 255, 255, 0.904);
-    padding-left: 40px;
-    padding-right: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
     font-size: 28px;
     font-family: "Regular", Arial, Helvetica, sans-serif;
     font-weight: 900;
     border-bottom: 2px solid white;
-
-
 }
 
 .header__title {
     font-size: 30px;
-    padding: 8px;
+    padding: 16px;
+    padding-left: 8px;
 }
 
 .header__burger {
-    font-size: 28px;
+    font-size: 48px;
+    
 }
