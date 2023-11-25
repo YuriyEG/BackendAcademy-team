@@ -26,5 +26,7 @@
 
 .header__burger {
     font-size: 48px;
+    background-color: black;
+    color: white;
     
 }
