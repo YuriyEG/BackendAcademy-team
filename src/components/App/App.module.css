@@ -3,13 +3,13 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        min-height: 100vh;
         background-color: black;
     }
 
     .app__header {
         width: 100%;
         min-width: 320px;
-        height: 80px;
         box-sizing: border-box;
         margin: 0 auto;
     }
@@ -18,8 +18,9 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+
         min-width: 320px;
-        min-height: 100%;
+        min-height: 200px;
         box-sizing: border-box;
         margin: 0 auto;
     }
@@ -53,6 +54,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        min-height: 100vh;
         background-color: black;
     }
 
@@ -60,7 +62,6 @@
         min-width: 768px;
         max-width: 1440px;
         width: 80%;
-        height: 80px;
         box-sizing: border-box;
         margin: 0 auto;
     }
@@ -71,14 +72,14 @@
         min-width: 768px;
         max-width: 1440px;
         width: 80%;
-        min-height: 100vh;
+        min-height: 200px;
         box-sizing: border-box;
         margin: 0 auto;
     }
 
     .app__content {
         width: 70%;
-        min-height: 100%;
+        height: auto;
         box-sizing: border-box;
         margin: 0 auto;
     }
@@ -87,7 +88,7 @@
         display: flex;
         flex-direction: row;
         width: 30%;
-        min-height: 100%;
+        height: auto;
         box-sizing: border-box;
         margin: 0 auto;
     }
