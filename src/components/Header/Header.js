@@ -8,7 +8,7 @@ const Header = () => {
     <div className={styles.header}>
       <div className={styles.header__title}>BackendAcademy</div>
       <Link to={'lessons'}>
-        <div className={styles.header__burger}>☰</div>
+        <div className={styles.header__burger}>≡</div>
       </Link>
     </div>
   );

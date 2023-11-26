@@ -9,6 +9,8 @@ import LessonCard from '../LessonCard/LessonCard';
 import Starting from '../Starting/Starting';
 import data from '../../mockData/data';
 import Overlay from '../Modal/Overlay';
+import SignUp from '../SignUp/SignUp';
+import SignIn from '../SignIn/SignIn';
 
 import styles from './App.module.css';
 
@@ -83,6 +85,8 @@ export const App = () => {
                 path={`${routerPaths.lessons}`}
                 render={() => (
                   <div style={{ paddingLeft: 'auto', width: '100%' }}>
+                    <SignIn />
+                    <SignUp />
                     {data.map((lesson) => (
                       <div key={lesson.id}>
                         <Lesson key={lesson.id} lesson={lesson} />

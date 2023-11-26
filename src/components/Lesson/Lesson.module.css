@@ -10,27 +10,29 @@
         flex-direction: row;
         justify-content: flex-start;
         width: 92%;
-        height: 80px;
+        height: 60px;
         border: 1px solid white;
         margin: 0 auto;
-        margin-bottom: 14px;
-        color: rgba(255, 255, 255);
+        margin-bottom: 12px;
+        color: rgb(142, 142, 142);
         background-color: rgb(9, 9, 9);
-        font-size: 24px;
+        font-size: 20px;
         font-family: "Regular", Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        padding: 20px;
+        user-select: none;
+        padding: 16px;
     }
     .lesson__title {
-        width: auto;
-        height: 40px;
+        width: 75%;
+        height: 30px;
+        overflow: hidden;
+    
     }
     .lesson__number {
-        width: 40px;
+        width: 30px;
         height: 40px;
     }
     .lesson__next {
-        width: 40px;
+        width: 25px;
         height: 40px;
         margin-left: auto;
     }
@@ -39,32 +41,33 @@
 @media screen and (min-width: 768px) {
     .lesson {
         display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
         width: 92%;
-        height: 80px;
+        height: 60px;
         border: 1px solid white;
         margin: 0 auto;
         margin-bottom: 14px;
-        color: white;
+        color: rgb(216, 216, 216);
         background-color: rgb(7, 7, 7);
-        font-size: 24px;
+        font-size: 20px;
         font-family: "Regular", Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        padding: 20px;
+        user-select: none;
+        padding: 16px;
     }
 
     .lesson__title {
-        width: auto;
-        height: 40px;
+        width: 75%;
+        height: 30px;
+        overflow: hidden;
     }
     .lesson__number {
-        width: 40px;
+        width: 30px;
         height: 40px;
     }
     .lesson__next {
-        width: 40px;
+        width: 25px;
         height: 40px;
         margin-left: auto;
     }
 }
-
-
