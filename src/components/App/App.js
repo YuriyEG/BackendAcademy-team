@@ -80,7 +80,7 @@ export const App = () => {
           <div className={styles.app__main}>
             <div className={styles.app__aside}></div>
             <div className={styles.app__content}>
-              <Route path={`${routerPaths.lessons}/:id`} render={() => <LessonCard />} exact />
+              <Route path={`${routerPaths.base}`} render={() => <LessonCard />} exact />
               <Route
                 path={`${routerPaths.lessons}`}
                 render={() => (
