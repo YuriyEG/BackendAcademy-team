@@ -16,8 +16,8 @@ import styles from './App.module.css';
 
 const routerPaths = {
   base: '/',
-  signIn: '/sign_in',
-  signUp: '/sign_up',
+  signIn: '/sign-in',
+  signUp: '/sign-up',
   lessons: '/lessons',
   create: '/create',
   profile: '/profile',
@@ -46,6 +46,7 @@ export const App = () => {
         <div className={styles.app}>
           <div className={styles.app__header}>
             <Route path={routerPaths.base} render={() => <Header />} exact />
+            <Route path={routerPaths.lessons} render={() => <Header />} exact />
           </div>
           <Route
             path={routerPaths.signIn}
@@ -81,6 +82,16 @@ export const App = () => {
             <div className={styles.app__aside}></div>
             <div className={styles.app__content}>
               <Route path={`${routerPaths.base}`} render={() => <LessonCard />} exact />
+              <Route
+                path={`${routerPaths.signIn}`}
+                render={() => (
+                  <Modal>
+                    <Overlay>
+                      <SignIn />
+                    </Overlay>
+                  </Modal>
+                )}
+              />
               <Route
                 path={`${routerPaths.lessons}`}
                 render={() => (
