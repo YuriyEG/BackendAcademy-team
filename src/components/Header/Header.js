@@ -20,24 +20,41 @@ const Header = ({ history }) => {
   const openHandler = () => {
     setOpen(!open);
   };
+
+  // const isAuth = false && JSON.parse(localStorage.getItem('auth')).auth;
+  const isAuth = true;
   return (
     <div className={styles.header}>
-      <div className={styles.header__title}>BackendAcademy</div>
-      <div style={{ backgroundColor: 'black', position: 'absolute', right: '0' }}>
+      <div className={styles.header__title} onClick={() => history.push('/')}>
+        BackendAcademy
+      </div>
+      <div style={{ position: 'relative' }}>
         {open ? (
-          <DownSquareOutlined className={styles.header__burger} onClick={openHandler} />
-        ) : (
           <UpSquareOutlined className={styles.header__burger} onClick={openHandler} />
+        ) : (
+          <DownSquareOutlined className={styles.header__burger} onClick={openHandler} />
         )}
+        {open ? (
+          <div style={{ backgroundColor: 'black', position: 'absolute', left: '0' }}>
+            {isAuth ? <HomeOutlined className={styles.header__burger} onClick={() => history.push('/')} /> : null}
+            <SettingOutlined className={styles.header__burger} />
 
-        <HomeOutlined className={styles.header__burger} onClick={() => history.push('./')} />
-        <SettingOutlined className={styles.header__burger} />
-        <PieChartOutlined className={styles.header__burger} />
-        <ControlOutlined className={styles.header__burger} />
-        <LogoutOutlined className={styles.header__burger} onClick={() => history.push('./sign-in')} />
-        <LoginOutlined className={styles.header__burger} onClick={() => history.push('./sign-up')} />
-        <GithubOutlined className={styles.header__burger} />
-        <BarsOutlined className={styles.header__burger} onClick={() => history.push('/lessons')} />
+            {isAuth ? <PieChartOutlined className={styles.header__burger} /> : null}
+            <ControlOutlined className={styles.header__burger} />
+            {isAuth ? (
+              <LogoutOutlined className={styles.header__burger} onClick={() => history.push('./sign-in')} />
+            ) : null}
+
+            {!isAuth ? (
+              <LoginOutlined className={styles.header__burger} onClick={() => history.push('./sign-in')} />
+            ) : null}
+
+            {isAuth ? <GithubOutlined className={styles.header__burger} /> : null}
+            {isAuth ? (
+              <BarsOutlined className={styles.header__burger} onClick={() => history.push('/lessons')} />
+            ) : null}
+          </div>
+        ) : null}
       </div>
     </div>
   );

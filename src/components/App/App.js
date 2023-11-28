@@ -30,8 +30,10 @@ export const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 1000);
   }, []);
+
+  const isAuth = true;
 
   return (
     <Router>
@@ -51,12 +53,24 @@ export const App = () => {
           <Route
             path={routerPaths.signIn}
             exact
-            render={() => <h1 style={{ color: 'white', height: '30px' }}>Страница входа</h1>}
+            render={() => (
+              <Modal>
+                <Overlay>
+                  <SignIn />
+                </Overlay>
+              </Modal>
+            )}
           />
           <Route
             path={routerPaths.signUp}
             exact
-            render={() => <h1 style={{ color: 'white' }}>Страница регистрации</h1>}
+            render={() => (
+              <Modal>
+                <Overlay>
+                  <SignUp />
+                </Overlay>
+              </Modal>
+            )}
           />
 
           <Route
@@ -79,30 +93,28 @@ export const App = () => {
           />
 
           <div className={styles.app__main}>
-            <div className={styles.app__aside}></div>
-            <div className={styles.app__content}>
-              <Route path={`${routerPaths.base}`} render={() => <LessonCard />} exact />
+            <div className={styles.app__aside}>
               <Route
-                path={`${routerPaths.signIn}`}
+                path={routerPaths.base}
                 render={() => (
-                  <Modal>
-                    <Overlay>
-                      <SignIn />
-                    </Overlay>
-                  </Modal>
+                  <div style={{ color: 'white', width: '100%', height: '100%', backgroundColor: 'rgb(10,10,10)' }}>
+                    Aside content
+                  </div>
                 )}
               />
+            </div>
+            <div className={styles.app__content}>
+              <Route path={`${routerPaths.base}`} render={() => <LessonCard />} exact />
               <Route
                 path={`${routerPaths.lessons}`}
                 render={() => (
                   <div style={{ paddingLeft: 'auto', width: '100%' }}>
-                    <SignIn />
-                    <SignUp />
-                    {data.map((lesson) => (
-                      <div key={lesson.id}>
-                        <Lesson key={lesson.id} lesson={lesson} />
-                      </div>
-                    ))}
+                    {isAuth &&
+                      data.map((lesson) => (
+                        <div key={lesson.id}>
+                          <Lesson key={lesson.id} lesson={lesson} />
+                        </div>
+                      ))}
                   </div>
                 )}
               />
